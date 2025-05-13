@@ -1,0 +1,11 @@
+{   "dataset_dir": "PREFIX/epic",
+    "image_resolution": [[-1,256,456,3], [-1, 256,456,3]],
+    "train_split": 0.95,
+    "action_keys": ["action/cartesian_position", "action/gripper_position"],
+    "image_keys" : ["observation/ego_image","observation/ego_image"],
+    "proprio_keys": ["observation/cartesian_position", "observation/gripper_position"],
+    "points_key": "points",
+    "instruction_key": ["instruction"],
+    "num_points": 1296,
+    "tasks": {}
+}

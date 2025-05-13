@@ -1,0 +1,36 @@
+method:
+    name: "ARM4R"
+    policy_ckpt: /home/niudt/project/arm4r_release/arm4r/output/finetune_rlbench_meat_off_grill/checkpoint-60.pth
+    debug: /home/niudt/tmp/arm4r_sim/finetune_rlbench_meat_off_grill-checkpoint-60.pth
+
+rlbench:
+    task_name: "multi"
+    tasks: [meat_off_grill]
+    demo_path: /home/niudt/original_peract_data/val #/home/niudt/project/arm4r_release/arm4r/sim/data/val #/scratch/partial_datasets/llarva_v2/new_train_rlbench #/scratch/partial_datasets/llarva_v2/new_val_rlbench # # /home/niudt/original_peract_data/val #
+    episode_length: 200
+    cameras: [front, wrist]
+    camera_resolution: [128, 128]
+    scene_bounds: [-0.3, -0.5, 0.6, 0.7, 0.5, 1.6]
+    include_lang_goal_in_obs: False
+    time_in_state: True
+    headless: True
+
+framework:
+    tensorboard_logging: False
+    csv_logging: False
+    gpu: 7
+    logdir: '/home/niudt/tmp/amr4r_sim'
+    start_seed: 0
+    record_every_n: 5
+    eval_envs: 1
+    eval_from_eps_number: 0
+    eval_episodes: 25
+    eval_type: 'missing' # or 'best'
+    eval_save_metrics: False
+
+cinematic_recorder:
+    enabled: False
+    camera_resolution: [1280, 720]
+    fps: 30
+    rotate_speed: 0.005
+    save_path: '/home/niudt/tmp/videos/'
