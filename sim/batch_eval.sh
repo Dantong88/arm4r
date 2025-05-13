@@ -1,2 +1,0 @@
-python eval.py method.debug=/home/niudt/tmp/arm4r_sim/standard_eval_finetune_rlbench_meat_off_grill-checkpoint-50 method.policy_ckpt=/home/niudt/project/arm4r_release/arm4r/output/finetune_rlbench_meat_off_grill/checkpoint-50.pth
-python eval.py method.debug=/home/niudt/tmp/arm4r_sim/standard_eval_finetune_rlbench_meat_off_grill-checkpoint-90 method.policy_ckpt=/home/niudt/project/arm4r_release/arm4r/output/finetune_rlbench_meat_off_grill/checkpoint-90.pth

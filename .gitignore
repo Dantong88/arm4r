@@ -170,3 +170,6 @@ checkpoints/
 /arm4r-ckpts/
 /sim/data/
 /sim/outputs/
+sim/PyRep/
+sim/RLBench/
+sim/YARR/
