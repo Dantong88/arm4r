@@ -51,17 +51,18 @@ git clone https://huggingface.co/datasets/yuvansharma/arm4r-ckpts
 Your folder structure should be:
 ```
 └── arm4r/arm4r-ckpts
-│   └── vision_encoder
-│   │   └── cross-mae-rtx-vitb.pth
-│   │   │   └── (pretrained vision encoder)
-│   └── model_ckpts
-│   │   ├── ft_kinova_pick_cube.pth
-│   │   │   └── (our trained single task policy for kinova cube picking)
-│   │   ├── ft_rlbench_meat_off_grill.pth
-│   │   │   └── (our trained single task policy for RLBench meat off grill)
-│   │   └── pretrained_epic.pth
-│   │       └── (our trained 3D points tracking on epic-kitchens videos for 6 epochs)
-└── ...
+│    ├── model_ckpts
+│    │   ├── ft_kinova_pick_cube  # Single Task Policy for Real Kinova Setting for "pick cube" task
+│    │   │   ├── ft_kinova_pick_cube.pth
+│    │   │   └── run.yaml
+│    │   ├── ft_rlbench_meat_off_grill # Single Task Policy for Sim RLBench Setting for "meat off grill" task
+│    │   │   ├── ft_rlbench_meat_off_grill.pth
+│    │   │   └── run.yaml
+│    │   └── pretrained_epic # first stage 3D point pre-training model weights, trained for 6 epochs
+│    │       ├── pretrained_epic.pth
+│    │       └── run.yaml
+│    └── vision_encoder
+│        └── cross-mae-rtx-vitb.pth # (pretrained vision encoder)
 ```
 ***
 

@@ -97,7 +97,7 @@ class ARM4RAgent(Agent):
         checkpoint_path = savedir
         train_yaml_path = os.path.join(os.path.dirname(checkpoint_path), 'run.yaml')
         # print(os.getcwd())
-        vision_encoder_path = "../../../../vision_encoder/cross-mae-rtx-vitb.pth"
+        vision_encoder_path = "../../../../arm4r-ckpts/vision_encoder/cross-mae-rtx-vitb.pth"
         self.arm4r = ARM4RWrapper(train_yaml_path, checkpoint_path, vision_encoder_path)
 
 

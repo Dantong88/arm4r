@@ -76,7 +76,7 @@ if __name__ == '__main__':
     parser.add_argument('--demo_path', type=str,
                         default='PREFIX/epic/epic_tasks/common_task/022082') # choose a random demo from the dataset we release
     parser.add_argument('--ckpt', type=str,
-                        default='../arm4r-ckpts/model_ckpts/pretrained_epic.pth') # use our released ckpt
+                        default='arm4r-ckpts/model_ckpts/pretrained_epic/pretrained_epic.pth') # use our released ckpt
     parser.add_argument('--points_key', type=str,
                         default='points')
     parser.add_argument('--image_resolution', nargs = '+', type = str, default=[[-1,256,456,3], [-1, 256,456,3]])
@@ -87,7 +87,7 @@ if __name__ == '__main__':
 
     checkpoint_path = args.ckpt
     train_yaml_path = os.path.join(os.path.dirname(args.ckpt), "run.yaml")
-    vision_encoder_path = "../arm4r-ckpts/vision_encoder/cross-mae-rtx-vitb.pth"
+    vision_encoder_path = "arm4r-ckpts/vision_encoder/cross-mae-rtx-vitb.pth"
 
 
     arm4r = ARM4RWrapper_pretrain_single_view(train_yaml_path, checkpoint_path, vision_encoder_path)

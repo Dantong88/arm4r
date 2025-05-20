@@ -4,7 +4,7 @@
 
 For using our pre-training data (76,014 episodes), please follow the Dataset Setup instructions outlined [here](https://github.com/yuvansharma/SpaTracker?tab=readme-ov-file#1-dataset-setup).
 
-After setting up the dataset, make sure to update [dataset_config.json](config/dataset_config_epic_pretraining.json) so that the file points to the correct location.
+After setting up the dataset, make sure to update [dataset_config.json](config/dataset_config_epic_pretraining.json) so that the file points to the correct location. The ```dataset_dir``` field should be set to the root folder which contains the ```epic_tasks_final``` folder downloaded from HuggingFace.
 
 ### Robotics Fine-tuning
 #### Structure

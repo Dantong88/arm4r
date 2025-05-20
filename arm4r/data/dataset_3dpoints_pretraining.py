@@ -53,12 +53,9 @@ class SequenceDataset(torch.utils.data.Dataset):
             self.points_mask_key = dataset_json['points_mask_key']
         else:
             self.use_points_mask = False
-        # for debug
-        self.common_path = []
-        for i in os.listdir('/datasets/llarva_v2/current/annotations/epic/epic_tasks/common_task')[:10000]:
-            self.common_path.append(os.path.join('/datasets/llarva_v2/current/annotations/epic/epic_tasks/common_task', i))
-        # common_path = glob(os.path.join(self.dataset_root, "**/*{}.zarr".format(self.points_key)), recursive=True)
-        # self.common_path = [os.path.join(self.dataset_root, p.replace("/{}.zarr".format(self.points_key), "")) for p in common_path]
+
+        common_path = glob(os.path.join(self.dataset_root, "**/*{}.zarr".format(self.points_key)), recursive=True)
+        self.common_path = [os.path.join(self.dataset_root, p.replace("/{}.zarr".format(self.points_key), "")) for p in common_path]
         self.file2length = {}
         for file in self.common_path:
             self.file2length[file] = self.get_traj_length(file, self.points_key) - 1 # remove the last one
