@@ -20,7 +20,8 @@ dependencies=[
     "imgviz",
     "transformers",
     "zarr",
-    "open_clip_torch"
+    "open_clip_torch",
+    "jupyter"
 ]
 
 requires-python = ">=3.8"

@@ -98,7 +98,7 @@ then launch the fine-tuning using:
 ```bash
 cd arm4r
 export CUDA_VISIBLE_DEVICES=0,1,2,3
-torchrun --nproc_per_node=4 --master_port=2453 scripts/finetune_robotics.py --dataset-cfg.dataset-json config/dataset_config_kinova.json --logging-cfg.output-dir output --logging-cfg.log-name finetune_kinova --optimizer-cfg.warmup-epochs 1.25 --trainer-cfg.epochs 125 --model-cfg.vision-encoder-cfg.vision-encoder arm4r-ckpts/vision_encoder/cross-mae-rtx-vitb.pth --dataset-cfg.num-repeat-traj 1 --model-cfg.policy-cfg.no-prompt-loss --model-cfg.policy-cfg.task robotics --model-cfg.policy-cfg.scratch-llama-config config/model_config/custom_transformer.json --dataset-cfg.non-overlapping 1 --shared-cfg.save-every 5 --dataset-cfg.shuffle-repeat-traj --optimizer-cfg.lr 5e-4 --shared_cfg.batch_size 64 --shared-cfg.seq_length 16 --model-cfg.policy-cfg.pretrained_path arm4r_ckpts/model_ckpts/pretrained_epic.pth
+torchrun --nproc_per_node=4 --master_port=2453 scripts/finetune_robotics.py --dataset-cfg.dataset-json config/dataset_config_kinova.json --logging-cfg.output-dir output --logging-cfg.log-name finetune_kinova --optimizer-cfg.warmup-epochs 1.25 --trainer-cfg.epochs 125 --model-cfg.vision-encoder-cfg.vision-encoder arm4r-ckpts/vision_encoder/cross-mae-rtx-vitb.pth --dataset-cfg.num-repeat-traj 1 --model-cfg.policy-cfg.no-prompt-loss --model-cfg.policy-cfg.task robotics --model-cfg.policy-cfg.scratch-llama-config config/model_config/custom_transformer.json --dataset-cfg.non-overlapping 1 --shared-cfg.save-every 5 --dataset-cfg.shuffle-repeat-traj --optimizer-cfg.lr 5e-4 --shared_cfg.batch_size 64 --shared-cfg.seq_length 16 --model-cfg.policy-cfg.pretrained_path arm4r-ckpts/model_ckpts/pretrained_epic/pretrained_epic.pth
 ```
 
 ##### Model Inference

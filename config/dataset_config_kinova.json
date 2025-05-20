@@ -1,4 +1,4 @@
-{   "dataset_dir": "PREFIX/real_kinova",
+{   "dataset_dir": "PREFIX_TO_real_kinova_release_data/pick_cube",
     "image_resolution": [[-1,224,224,3], [-1, 224,224,3]],
     "train_split": 0.95,
     "action_keys": ["action/cartesian_position", "action/gripper_position"],
@@ -6,8 +6,8 @@
     "proprio_keys": ["observation/cartesian_position", "observation/gripper_position"],
     "instruction_key": ["instruction"],
     "tasks": {
-        "pick_cyan_cube_2025-01-13": 200,
-        "pick_green_cube_2025-01-13": 200,
-        "pick_yellow_cube_2025-01-07": 200
+        "pick_cyan_cube": 200,
+        "pick_green_cube": 200,
+        "pick_yellow_cube": 200
     }
 }
