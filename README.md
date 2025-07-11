@@ -107,7 +107,7 @@ Please look at [inference_kinova.ipynb](tools/inference_kinova.ipynb) for exampl
 
 ***
 ## License
-This project is under the Apache 2.0 license. See [LICENSE](LICENSE.txt) for details. This work was supported by the BAIR Commons HIC Center.
+This project is under the MIT license. See [LICENSE](LICENSE) for details. This work was supported by the BAIR Commons HIC Center.
 
 ## Citation 
 Please give us a star 🌟 on Github to support us!
